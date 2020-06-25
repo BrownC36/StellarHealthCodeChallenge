@@ -36,7 +36,9 @@ def upload_file(local_file_name, bucket_name,  object_name=None):
         object_name = local_file_name
 
     s3_client = boto3.client('s3')
+    
     try:
+        logging.info('Uploading file: ' + object_name)
         response = s3_client.upload_file(local_file_name, bucket_name, object_name)
         logging.info('File successfully uploaded')
     except ClientError as e:

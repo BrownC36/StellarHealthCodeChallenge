@@ -8,5 +8,4 @@ def main():
 if __name__ == "__main__":
     # Configure logging
     logging.basicConfig(format='%(asctime)s %(message)s',filename='stellar.log', level=logging.INFO)
-
     main()
